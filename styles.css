@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Oranienbaum&display=swap');
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main, header h1 {
+  font-family: 'Oranienbaum',serif;
+  margin-bottom: 0;
+}
+
+.navbar{
+  height: 80px;
+}
+
+.navbar-nav {
+margin-left: 25px;
+}
+
+.btn-outline-primary{
+  --bs-btn-color: #d29baa!important;
+  --bs-btn-border-color: #d29baa!important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d29baa!important;
+  --bs-btn-hover-border-color: #d29baa!important;
+  --bs-btn-focus-shadow-rgb: 13,110,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #d29baa!important;
+  --bs-btn-active-border-color: #d29baa!important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #d29baa!important;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #d29baa!important;
+  --bs-gradient: none;
+}
+
+header ul {
+  display: flex;
+  list-style:none;
+  gap: 10px;
+}
+
+ul a {
+  text-decoration: none;
+  color: black;
+}
+
+.nr {
+  text-align: center;
+  margin-top: 15px;
+  }
+
+.nr h1 {
+  font-size: 60px;
+  }
+  
+.recetas ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  }
+  
+.recetas li {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px;
+  border: 3px solid #d29baa;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  background-color: white;
+}
+
+.recetas li p{
+  margin-bottom:0px;
+}
+  
+.recetas li:hover {
+  transform: scale(1.03);
+}
+
+.recetas img {
+  width: 360px;
+  }
+  
+.recetas p {
+  font-size: 25px;
+  }
+
+.platos-destacados ul {
+  display: block;
+  max-width: 480px;
+}
+.platos-destacados {
+  background-image: url(Multimedia/fondococina.jpg);
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.platos-destacados h1 {
+  font-size: 60px;
+  margin-top: 15px;
+}
+
+footer {
+  background-color: #d29baa;
+  color: #000000;
+  padding: 10px;
+  font-family: 'Lora', serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+}
+
+footer h1 {
+  font-size: 24px;
+}
+
+footer p {
+  font-size: 20px;
+  width: 50%;
+}
+
+.redes {
+  text-align: center;
+}
+
+.redes h2 {
+  font-size: 25px;
+}
+
+.redes-icons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.redes-icons img {
+  width: 25px;
+  height: 25px;
+}
+
+.contacto{
+  text-align: center;
+  height: 100%;
+}
+
+.contacto h2 {
+  font-size: 25px;
+}
+
+.contacto p {
+  font-size: 16px;
+}
+
+.pagina-contacto label {
+  font-size: 20px;
+  display: block;
+  margin-top: 10px;
+}
+
+.pagina-contacto input,
+.pagina-contacto textarea {
+  width: 50%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #a5a4a4;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.quienes-somos h1 {
+  font-size: 25px;
+}
+
+.quienes-somos p {
+  font-size: 16px;
+}
+
+.recetas ul a {
+  color: black;
+}

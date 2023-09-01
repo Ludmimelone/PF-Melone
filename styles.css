@@ -9,7 +9,7 @@ main, header h1 {
   margin-bottom: 0;
 }
 
-.btn-outline-primary{
+.btn-outline-primary {
   --bs-btn-color: #d29baa!important;
   --bs-btn-border-color: #d29baa!important;
   --bs-btn-hover-color: #fff;
@@ -103,33 +103,26 @@ ul a {
   height: 25px;
 }
 
-.contacto{
-  text-align: center;
-  height: 100%;
-}
-
-.contacto h2 {
-  font-size: 25px;
-}
-
-.contacto p {
-  font-size: 16px;
-}
-
-.pagina-contacto label {
+.contacto-rellenar label {
   font-size: 20px;
   display: block;
   margin-top: 10px;
 }
 
-.pagina-contacto input,
-.pagina-contacto textarea {
-  width: 50%;
+.contacto-rellenar input,
+.contacto-rellenar textarea {
   padding: 8px;
   margin-top: 6px;
   border: 1px solid #a5a4a4;
   border-radius: 5px;
   font-size: 16px;
+}
+
+.pag-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .quienes-somos h1 {
@@ -167,3 +160,7 @@ ul a {
 .foto4 { grid-area: foto4; }
 
 .foto5 { grid-area: foto5; }
+
+#contacto{
+  min-height: calc(100vh - 206px);
+}

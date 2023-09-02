@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Oranienbaum&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Oranienbaum&display=swap");
+* {
   margin: 0;
   box-sizing: border-box;
 }
 
-main, header h1 {
-  font-family: 'Oranienbaum',serif;
-  margin-bottom: 0;
+main {
+  font-family: "Oranienbaum", serif;
 }
 
 .btn-outline-primary {
@@ -26,18 +25,20 @@ main, header h1 {
   --bs-gradient: none;
 }
 
+header h1 {
+  font-family: "Oranienbaum", serif;
+  margin-bottom: 0;
+}
 header ul {
-  display: flex;
-  list-style:none;
+  list-style: none;
   gap: 10px;
 }
-
-ul a {
+header ul a {
   text-decoration: none;
   color: black;
 }
 
-.nr h1 {
+.nuevas-recetas h1 {
   margin-top: 15px;
   font-size: 60px;
 }
@@ -48,23 +49,16 @@ ul a {
   transition: transform 0.3s ease-in-out;
   background-color: white;
 }
-
 .recetas .card:hover {
   transform: scale(1.03);
 }
-
 .recetas img {
   width: 100%;
 }
-
 .recetas h5 {
   font-size: 25px;
 }
 
-.platos-destacados ul {
-  display: block;
-  max-width: 480px;
-}
 .platos-destacados {
   background-image: url(Multimedia/fondococina.jpg);
   background-size: cover;
@@ -74,33 +68,16 @@ ul a {
   align-items: center;
   justify-content: center;
 }
-
+.platos-destacados ul {
+  display: block;
+  max-width: 480px;
+}
 .platos-destacados h1 {
   font-size: 60px;
   margin-top: 15px;
 }
-
-.mi-clase {
+.platos-destacados .mi-clase {
   font-size: 25px;
-}
-
-.redes {
-  text-align: center;
-}
-
-.redes h2 {
-  font-size: 25px;
-}
-
-.redes-icons {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-
-.redes-icons img {
-  width: 25px;
-  height: 25px;
 }
 
 .contacto-rellenar label {
@@ -108,9 +85,7 @@ ul a {
   display: block;
   margin-top: 10px;
 }
-
-.contacto-rellenar input,
-.contacto-rellenar textarea {
+.contacto-rellenar input, .contacto-rellenar textarea {
   padding: 8px;
   margin-top: 6px;
   border: 1px solid #a5a4a4;
@@ -126,41 +101,47 @@ ul a {
 }
 
 .quienes-somos h1 {
-  font-size: 25px;
+  font-size: 35px;
 }
-
 .quienes-somos p {
-  font-size: 16px;
+  font-size: 18px;
 }
 
-.recetas ul a {
-  color: black;
+.bg-custom {
+  background-color: #d29baa;
 }
 
-.bg-custom{
-  background-color: #d29baa
-}
-
-.fotos-grid {  display: grid;
+.fotos-grid {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "foto1 foto1 foto2 foto4"
-    "foto1 foto1 foto3 foto5";
+  grid-template-areas: "foto1 foto1 foto2 foto4" "foto1 foto1 foto3 foto5";
 }
 
-.foto1 { grid-area: foto1; }
+.foto1 {
+  grid-area: foto1;
+}
 
-.foto2 { grid-area: foto2; }
+.foto2 {
+  grid-area: foto2;
+}
 
-.foto3 { grid-area: foto3; }
+.foto3 {
+  grid-area: foto3;
+}
 
-.foto4 { grid-area: foto4; }
+.foto4 {
+  grid-area: foto4;
+}
 
-.foto5 { grid-area: foto5; }
+.foto5 {
+  grid-area: foto5;
+}
 
-#contacto{
+#contacto {
   min-height: calc(100vh - 206px);
 }
+
+/*# sourceMappingURL=styles.css.map */

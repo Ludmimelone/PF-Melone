@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Oranienbaum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto&display=swap');
 
-$letra1: 'Oranienbaum', serif;
+$letra1: 'Roboto', sans-serif;
+
+// arreglar el tema de la letra
 
 *{
   margin: 0;
@@ -100,12 +103,16 @@ header{
     align-items: center;
     height: 100vh;
     background-image: url(Multimedia/medialunitas.jpg);
-    
+
         .pag-contacto {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+                h1 {
+                    font-family: $letra1;
+                }
             
                 .contacto-rellenar {
                     display: flex;

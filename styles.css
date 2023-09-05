@@ -80,24 +80,41 @@ header ul a {
   font-size: 25px;
 }
 
-.contacto-rellenar label {
-  font-size: 20px;
-  display: block;
-  margin-top: 10px;
+#contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(Multimedia/medialunitas.jpg);
 }
-.contacto-rellenar input, .contacto-rellenar textarea {
-  padding: 8px;
-  margin-top: 6px;
-  border: 1px solid #a5a4a4;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.pag-contacto {
+#contacto .pag-contacto {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+#contacto .pag-contacto .contacto-rellenar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: #d29baa;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#contacto .pag-contacto .contacto-rellenar label {
+  margin-bottom: 10px;
+}
+#contacto .pag-contacto .contacto-rellenar input, #contacto .pag-contacto .contacto-rellenar textarea {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .quienes-somos h1 {

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Oranienbaum&display=swap');
+
+$letra1: 'Oranienbaum', serif;
+
 *{
   margin: 0;
   box-sizing: border-box;
@@ -91,27 +94,45 @@ header{
     }
 }
 
-.contacto-rellenar{
-    label {
-        font-size: 20px;
-        display: block;
-        margin-top: 10px;
-    }
+#contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(Multimedia/medialunitas.jpg);
+    
+        .pag-contacto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+                .contacto-rellenar {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 600px;
+                    width: 100%;
+                    padding: 20px;
+                    background-color: #d29baa;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-    input, textarea {
-        padding: 8px;
-        margin-top: 6px;
-        border: 1px solid #a5a4a4;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-}
+                        label {
+                            margin-bottom: 10px;
+                        }
 
-.pag-contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+                        input, textarea {
+                            margin-bottom: 20px;
+                            width: 100%;
+                            padding: 10px;
+                            border: none;
+                            border-radius: 5px;
+                            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                        }
+                }
+        }
 }
 
 .quienes-somos{

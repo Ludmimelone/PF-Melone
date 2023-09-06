@@ -165,4 +165,28 @@ header ul a {
   min-height: calc(100vh - 206px);
 }
 
+#nosotros {
+  min-height: calc(100vh - 206px);
+}
+#nosotros .quienes-somos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#nosotros .quienes-somos h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+#nosotros .quienes-somos p {
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
 /*# sourceMappingURL=styles.css.map */

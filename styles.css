@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Oranienbaum&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap");
+@keyframes slidein {
+  from {
+    margin-bottom: 40%;
+    width: 300%;
+  }
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -85,7 +95,7 @@ header ul a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(Multimedia/medialunitas.jpg);
 }
 #contacto .pag-contacto {
@@ -93,24 +103,29 @@ header ul a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 #contacto .pag-contacto h1 {
-  font-family: "Roboto", sans-serif;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  font-family: "Domine", serif;
+  text-align: center;
 }
 #contacto .pag-contacto .contacto-rellenar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 600px;
-  width: 100%;
-  padding: 20px;
   background-color: #d29baa;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  max-width: 37.5rem;
+  width: 100%;
 }
 #contacto .pag-contacto .contacto-rellenar label {
   margin-bottom: 10px;
+  font-size: 18px;
 }
 #contacto .pag-contacto .contacto-rellenar input, #contacto .pag-contacto .contacto-rellenar textarea {
   margin-bottom: 20px;
@@ -120,19 +135,39 @@ header ul a {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
-.quienes-somos h1 {
-  font-size: 35px;
+#contacto .pag-contacto .contacto-rellenar button {
+  background-color: #f2dada;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 15px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
-.quienes-somos p {
-  font-size: 18px;
+#contacto .pag-contacto .contacto-rellenar button:hover {
+  background-color: #ad7b89;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-.bg-custom {
+#recetasvarias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(Multimedia/fondorosa.jpg);
+}
+#recetasvarias .temas-recetas {
+  width: 80%;
+  background-color: rgb(252, 252, 252);
+  padding: 1.3rem;
+}
+#recetasvarias .temas-recetas .receta-custom {
   background-color: #d29baa;
 }
-
-.fotos-grid {
+#recetasvarias .temas-recetas .fotos-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -140,43 +175,47 @@ header ul a {
   grid-auto-flow: row;
   grid-template-areas: "foto1 foto1 foto2 foto4" "foto1 foto1 foto3 foto5";
 }
-
-.foto1 {
+#recetasvarias .temas-recetas .fotos-grid .foto1 {
   grid-area: foto1;
 }
-
-.foto2 {
+#recetasvarias .temas-recetas .fotos-grid .foto2 {
   grid-area: foto2;
 }
-
-.foto3 {
+#recetasvarias .temas-recetas .fotos-grid .foto3 {
   grid-area: foto3;
 }
-
-.foto4 {
+#recetasvarias .temas-recetas .fotos-grid .foto4 {
   grid-area: foto4;
 }
-
-.foto5 {
+#recetasvarias .temas-recetas .fotos-grid .foto5 {
   grid-area: foto5;
 }
 
-#contacto {
-  min-height: calc(100vh - 206px);
+.bg-custom {
+  background-color: #d29baa;
 }
 
 #nosotros {
   min-height: calc(100vh - 206px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  background-image: linear-gradient(to top, #d29baa, #f2dada);
 }
 #nosotros .quienes-somos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+  background-color: #d29baa;
+  border-radius: 0.313rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  max-width: 37.5rem;
+  width: 100%;
+  animation-duration: 2s;
+  animation-name: slidein;
 }
 #nosotros .quienes-somos h1 {
   text-align: center;
@@ -187,6 +226,31 @@ header ul a {
   text-align: justify;
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+#main-receta {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(Multimedia/fondorosa.jpg);
+}
+#main-receta .superpuesta {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  background-color: rgb(252, 252, 252);
+  padding: 4%;
+  text-align: center;
+}
+#main-receta .superpuesta img {
+  width: 90%;
+}
+#main-receta .superpuesta h1 {
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */

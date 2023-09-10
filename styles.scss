@@ -1,11 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Oranienbaum&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap');
 
-$letra1: 'Roboto', sans-serif;
+$letra1: 'Domine', serif;
 $letra2: 'Oranienbaum',serif;
 $color1: #d29baa;
+$color2: #f2dada;
+$color3: rgb(252, 252, 252);
 
-// arreglar el tema de la letra
+@mixin contenedor($background){
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+    border-radius: 0.313rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    max-width: 37.5rem;
+    width: 100%;
+}
+
+@keyframes slidein {
+    from {
+        margin-bottom: 40%;
+        width: 300%;
+    }
+
+    to {
+        margin-top: 0%;
+        width: 100%;
+    }
+}
 
 *{
   margin: 0;
@@ -103,7 +128,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(Multimedia/medialunitas.jpg);
 
         .pag-contacto {
@@ -111,25 +136,20 @@ header{
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 2rem;
 
                 h1 {
+                    padding: 2rem;
+                    padding-bottom: 1rem;
                     font-family: $letra1;
+                    text-align: center;
                 }
             
                 .contacto-rellenar {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    max-width: 600px;
-                    width: 100%;
-                    padding: 20px;
-                    background-color: $color1;
-                    border-radius: 5px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+                    @include contenedor($color1);
                         label {
                             margin-bottom: 10px;
+                            font-size: 18px;
                         }
 
                         input, textarea {
@@ -140,61 +160,83 @@ header{
                             border-radius: 5px;
                             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
                         }
+
+                        button {
+                            background-color: $color2;
+                            color: black;
+                            border: none;
+                            border-radius: 5px;
+                            padding: 7px 15px;
+                            font-size: 1.05rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+                            transition: all 0.2s ease-in-out;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: #ad7b89;
+                                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+                            }
+                        }
                 }
         }
 }
 
-.quienes-somos{
-    h1{
-        font-size: 35px;
+#recetasvarias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Multimedia/fondorosa.jpg);
+
+    .temas-recetas {
+        width: 80%;
+        background-color: $color3;
+        padding: 1.3rem;
+    
+        .receta-custom {
+            background-color: $color1;
+        }
+    
+        .fotos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "foto1 foto1 foto2 foto4"
+                "foto1 foto1 foto3 foto5";
+    
+                .foto1 { grid-area: foto1; }
+    
+                .foto2 { grid-area: foto2; }
+    
+                .foto3 { grid-area: foto3; }
+    
+                .foto4 { grid-area: foto4; }
+    
+                .foto5 { grid-area: foto5; }
+            }
     }
-
-    p{
-        font-size: 18px;
-    }
 }
 
-.bg-custom{
-  background-color: $color1;
-}
-
-.fotos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "foto1 foto1 foto2 foto4"
-        "foto1 foto1 foto3 foto5";
-}
-
-.foto1 { grid-area: foto1; }
-
-.foto2 { grid-area: foto2; }
-
-.foto3 { grid-area: foto3; }
-
-.foto4 { grid-area: foto4; }
-
-.foto5 { grid-area: foto5; }
-
-#contacto{
-  min-height: calc(100vh - 206px);
+.bg-custom {
+    background-color: $color1;
 }
 
 #nosotros{
     min-height: calc(100vh - 206px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    background-image: linear-gradient(to top, $color1 , $color2);
 
         .quienes-somos {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #ccc;
-            padding: 20px;
-            max-width: 600px;
-            margin: 0 auto;
+            @include contenedor($color1);
+            animation-duration: 2s;
+            animation-name: slidein;
 
                 h1 {
                     text-align: center;
@@ -206,6 +248,34 @@ header{
                     text-align: justify;
                     font-size: 1.2rem;
                     line-height: 1.5;
+                }
+        }
+}
+
+#main-receta{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Multimedia/fondorosa.jpg);
+
+        .superpuesta {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 70%;
+            height: 100%;
+            background-color: $color3;
+            padding: 4%;
+            text-align: center;
+
+                img {
+                    width: 90%;
+                }
+
+                h1 {
+                    margin-top: 15px;
                 }
         }
 }
